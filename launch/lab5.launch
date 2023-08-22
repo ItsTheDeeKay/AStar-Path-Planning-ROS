@@ -1,0 +1,11 @@
+<launch>
+	<arg name="goalx" type="double" default="7.0" />
+	<arg name="goaly" type="double" default="4.0" />
+	<param name="goalx" value="$(arg goalx)"/>
+	<param name="goaly" value="$(arg goaly)"/>
+
+	<node name="Astar" pkg="lab5" output="screen" type="lab5.py"/>
+	
+	<include file="$(find husky_gazebo)/launch/playpen.launch"/>
+	<include file="$(find husky_gazebo)/launch/spawn_husky.launch"/> 
+</launch>
