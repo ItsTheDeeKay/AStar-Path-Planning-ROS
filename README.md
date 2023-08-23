@@ -28,7 +28,7 @@ You will implement a path planner, that runs only once after launch. You will ne
 - The start position 
 - The goal position
 
-# 2) Single Step Execution (20 points)
+# 2) Single Step Execution
 In order for your robot to follow a sequence of targets/checkpoints, it should first follow a single step. Given any current position, you should command the robot to move towards its current immediate goal. This should be the coordinates of the center of a cell. This will be an important step, as the robot needs to move from center of a cell, to the center of the next cell to avoid crashing into obstacles that are at the edges. This also depends on the map resolution and the safety margin of the robot size. So you may need to observe the performance, and make changes. We suggest that you keep an internal global variable for the current immediate goal. This way, it can be updated asynchronously in the next stage. Anytime you receive an update on the position of the robot, you can publish the appropriate cmd vel message in the callback, to move the robot towards the current immediate goal.
 
 Test this stage using hardcoded coordinates, and observe the performance. Test to see if you can launch everything by running the command:
